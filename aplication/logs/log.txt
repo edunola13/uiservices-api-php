@@ -1,0 +1,19 @@
+[2015-01-02 18:03:40.000000 127.0.0.1  - Unknown ] Use of undefined constant Exception - assumed 'Exception'
+----------\n[2015-01-02 18:03:40.000000 127.0.0.1  - Error Fatal - Parse - Strict ] Can only throw objects
+----------\n[2015-01-02 18:08:11.000000 127.0.0.1  - Unknown ] include(C:\wamp\www\uiservices-api-php\aplication//source/view/components/alert_message.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory
+----------\n[2015-01-02 18:08:11.000000 127.0.0.1  - Unknown ] include() [<a href='function.include'>function.include</a>]: Failed opening 'C:\wamp\www\uiservices-api-php\aplication//source/view/components/alert_message.php' for inclusion (include_path='.;C:\php\pear')
+----------\n[2015-01-02 19:35:49.000000 127.0.0.1  - Unknown ] fopen(C:\wamp\www\uiservices-api-php\aplication//source/view/themes/base.php) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory
+----------\n[2015-01-02 19:35:49.000000 127.0.0.1  - Unknown ] fwrite() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-02 19:35:49.000000 127.0.0.1  - Unknown ] fclose() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-02 19:35:49.000000 127.0.0.1  - Unknown ] include(C:\wamp\www\uiservices-api-php\aplication//source/view/themes/base.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory
+----------\n[2015-01-02 19:35:49.000000 127.0.0.1  - Unknown ] include() [<a href='function.include'>function.include</a>]: Failed opening 'C:\wamp\www\uiservices-api-php\aplication//source/view/themes/base.php' for inclusion (include_path='.;C:\php\pear')
+----------\n[2015-01-02 19:35:49.000000 127.0.0.1  - Unknown ] fopen(C:\wamp\www\uiservices-api-php\aplication//source/view/themes/base.php) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: No such file or directory
+----------\n[2015-01-02 19:35:49.000000 127.0.0.1  - Unknown ] fwrite() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-02 19:35:49.000000 127.0.0.1  - Unknown ] fclose() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-02 19:35:49.000000 127.0.0.1  - Unknown ] include(C:\wamp\www\uiservices-api-php\aplication//source/view/themes/base.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory
+----------\n[2015-01-02 19:35:49.000000 127.0.0.1  - Unknown ] include() [<a href='function.include'>function.include</a>]: Failed opening 'C:\wamp\www\uiservices-api-php\aplication//source/view/themes/base.php' for inclusion (include_path='.;C:\php\pear')
+----------\n[2015-01-02 19:39:37.000000 127.0.0.1  - Error Fatal - Parse - Strict ] Class 'Tags' not found
+----------\n[2015-01-02 19:39:53.000000 127.0.0.1  - Error Fatal - Parse - Strict ] Call to undefined function title()
+----------\n[2015-01-02 19:39:54.000000 127.0.0.1  - Error Fatal - Parse - Strict ] Call to undefined function title()
+----------\n[2015-01-02 19:57:02.000000 127.0.0.1  - Error Fatal - Parse - Strict ] Call to undefined function theme()
+----------\n
