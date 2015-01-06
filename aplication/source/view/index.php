@@ -5,7 +5,7 @@
     <?php Tags::theme();?>
 </head>
 <body>
-    <?php Tags::title('Enola PHP');?>
+    <?php Tags::title('Enola PHP');?>    
     <?php Tags::alert_message('danger', 'mensaje');?>
     <?php Tags::address('22', '222', '222', '222'); ?>
     <?php Tags::badge('assasasa', 'asasas'); ?>

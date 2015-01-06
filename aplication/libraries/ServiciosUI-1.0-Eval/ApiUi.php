@@ -8,7 +8,10 @@
 class ApiUi {
     private static $instancia;
     
+    public $componentes;
+    
     private function __construct() {
+        $this->componentes= array();
     }    
     public static function getInstance(){
         if(!self::$instancia instanceof self){
@@ -26,7 +29,7 @@ class ApiUi {
             } catch(Exception $e){
                 echo 'Error en carga del componente: ' . $nombre;
                 return;
-            }
+            } 
          }
          include PATH_THEME . $nombre . '.php';
     }
@@ -54,79 +57,92 @@ class ApiUi {
         //$url= 'http://localhost/serviciosui/javascript?nombre=' . $nombre;        
         return $this->conexionGet($url);
     }  
-    public function componente($nombre, $valores = null){        
-        if(! file_exists(PATH_COMPONENT . $nombre . '.php')){
+    public function componente($nombre, $valores = null){
+        if(! isset($this->componentes[$nombre])){
             try{
-                $componente= $this->conexionComponente($nombre);
-                $arch = fopen(PATH_COMPONENT . $nombre . '.php', 'x');
-                $codigo= "";
-                $inicio= 0;            
-                $inicio= strpos($componente, "{{", $inicio);
-                $fin= strpos($componente, "}}", $inicio);
-                while($inicio !== FALSE && $fin !== FALSE){
-                    $codigo .= substr($componente, 0, $inicio);
-                    $inicio += 2;
-                    $var= substr($componente, $inicio, $fin - $inicio);
-                    if($var != 'components'){
-                        $cod= '<?php echo $valores[' . '"'. $var . '"' . '];?>';
-                        $codigo .= $cod;
-                    }
-
-                    $componente= substr($componente, $fin + 2);
-
-                    $inicio= strpos($componente, "{{", 0);
-                    $fin= strpos($componente, "}}", 0);
-                }
-                $codigo .= $componente;
-                $componente= $codigo;
-                $codigo= "";
-
-                $inicio= 0;            
-                $inicio= strpos($componente, "{%", $inicio);
-                $fin= strpos($componente, "%}", $inicio);
-                $nivelesElseIf= array();
-                while($inicio !== FALSE && $fin !== FALSE){
-                    $codigo .= substr($componente, 0, $inicio);
-
-                    //$codigo .= $this->codigoIf($componente, $inicio, $fin);
-                    $tipoIf= $this->tipoIf($inicio, $componente);
-                    if($tipoIf == "if"){
-                        $codigo .= $this->armarIf($inicio, $componente);
-                        $nivelesElseIf[]= 0;                    
-                    }
-                    if($tipoIf == 'endif'){
-                        $cant= count($nivelesElseIf);
-                        $codigo .= '<?php }';
-                        for ($i = 0; $i < $nivelesElseIf[$cant - 1]; $i++) {
-                            $codigo .= '}';
+                if(! file_exists(PATH_COMPONENT . $nombre . '.txt')){                
+                    $componente= $this->conexionComponente($nombre);
+                    $arch = fopen(PATH_COMPONENT . $nombre . '.txt', 'x');
+                    $codigo= "";
+                    $inicio= 0;            
+                    $inicio= strpos($componente, "{{", $inicio);
+                    $fin= strpos($componente, "}}", $inicio);
+                    while($inicio !== FALSE && $fin !== FALSE){
+                        $codigo .= substr($componente, 0, $inicio);
+                        $inicio += 2;
+                        $var= substr($componente, $inicio, $fin - $inicio);
+                        if($var != 'components'){
+                            $cod= '<?php echo $valores[' . '"'. $var . '"' . '];?>';
+                            $codigo .= $cod;
                         }
-                        $codigo .= '?>';
-                        array_pop($nivelesElseIf);
-                    }
-                    if($tipoIf == 'else'){
-                        $codigo .= $this->armarIf($inicio, $componente);
-                    }
-                    if($tipoIf == 'elseif'){
-                        $codigo .= $this->armarIf($inicio, $componente);
-                        $nivelesElseIf[count($nivelesElseIf) - 1] += 1;
-                    }
 
-                    $componente= substr($componente, $fin + 2);
+                        $componente= substr($componente, $fin + 2);
 
-                    $inicio= strpos($componente, "{%", 0);
-                    $fin= strpos($componente, "%}", 0);
+                        $inicio= strpos($componente, "{{", 0);
+                        $fin= strpos($componente, "}}", 0);
+                    }
+                    $codigo .= $componente;
+                    $componente= $codigo;
+                    $codigo= "";
+
+                    $inicio= 0;            
+                    $inicio= strpos($componente, "{%", $inicio);
+                    $fin= strpos($componente, "%}", $inicio);
+                    $nivelesElseIf= array();
+                    while($inicio !== FALSE && $fin !== FALSE){
+                        $codigo .= substr($componente, 0, $inicio);
+
+                        //$codigo .= $this->codigoIf($componente, $inicio, $fin);
+                        $tipoIf= $this->tipoIf($inicio, $componente);
+                        if($tipoIf == "if"){
+                            $codigo .= $this->armarIf($inicio, $componente);
+                            $nivelesElseIf[]= 0;                    
+                        }
+                        if($tipoIf == 'endif'){
+                            $cant= count($nivelesElseIf);
+                            $codigo .= '<?php }';
+                            for ($i = 0; $i < $nivelesElseIf[$cant - 1]; $i++) {
+                                $codigo .= '}';
+                            }
+                            $codigo .= '?>';
+                            array_pop($nivelesElseIf);
+                        }
+                        if($tipoIf == 'else'){
+                            $codigo .= $this->armarIf($inicio, $componente);
+                        }
+                        if($tipoIf == 'elseif'){
+                            $codigo .= $this->armarIf($inicio, $componente);
+                            $nivelesElseIf[count($nivelesElseIf) - 1] += 1;
+                        }
+
+                        $componente= substr($componente, $fin + 2);
+
+                        $inicio= strpos($componente, "{%", 0);
+                        $fin= strpos($componente, "%}", 0);
+                    }
+                    $codigo .= $componente;
+
+                    fwrite($arch, '?>'. $codigo);
+                    fclose($arch);           
                 }
-                $codigo .= $componente;
-                
-                fwrite($arch, $codigo);
-                fclose($arch);
+                $fh = fopen(PATH_COMPONENT . $nombre . '.txt','r');
+                $codigo= '';
+                while ($line = fgets($fh)) {
+                    $codigo.= $line;
+                }
+                fclose($fh);
+                $this->componentes[$nombre]= $codigo;
             } catch(Exception $e){
+                unset($this->componentes[$nombre]);
                 echo 'Error en carga del componente: ' . $nombre;
                 return;
-            }            
+            } 
+        }        
+        $rta= eval($this->componentes[$nombre]);
+        //Si eval devuelve false quiere decir que fallo la ejecucion
+        if($rta === FALSE){
+            echo 'Error ejecutando el componente: ' . $nombre;
         }
-        //Lo incluyo y se ejecuta solo
-        include PATH_COMPONENT . $nombre . '.php';
     }  
     private function armarIf($inicio, $componente){
         $res= '<?php ';
