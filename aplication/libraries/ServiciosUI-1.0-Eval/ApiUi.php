@@ -27,6 +27,7 @@ class ApiUi {
                 fwrite($arch, $theme);
                 fclose($arch); 
             } catch(Exception $e){
+                echo $e->getMessage();
                 echo 'Error en carga del componente: ' . $nombre;
                 return;
             } 
@@ -41,6 +42,7 @@ class ApiUi {
                 fwrite($arch, $javascript);
                 fclose($arch);
             } catch(Exception $e){
+                echo $e->getMessage();
                 echo 'Error en carga del componente: ' . $nombre;
                 return;
             } 
@@ -58,11 +60,21 @@ class ApiUi {
         return $this->conexionGet($url);
     }  
     public function componente($nombre, $valores = null){
-        if(! isset($this->componentes[$nombre])){
-            try{
-                if(! file_exists(PATH_COMPONENT . $nombre . '.txt')){                
+        try{
+            if($this->componentes == NULL){
+                if(! file_exists(PATH_COMPONENT . 'components.txt')){
+                    $arch = fopen(PATH_COMPONENT . 'components.txt', 'x');
+                    fclose($arch);
+                }
+                else{
+                    $lineas= file(PATH_COMPONENT . 'components.txt');
+                    $this->componentes= $this->parse_properties($lineas);
+                }
+            }
+            if(! isset($this->componentes[$nombre])){
+                if(! isset($this->componentes[$nombre])){
                     $componente= $this->conexionComponente($nombre);
-                    $arch = fopen(PATH_COMPONENT . $nombre . '.txt', 'x');
+                    $arch = fopen(PATH_COMPONENT . 'components.txt', 'a+');
                     $codigo= "";
                     $inicio= 0;            
                     $inicio= strpos($componente, "{{", $inicio);
@@ -122,22 +134,19 @@ class ApiUi {
                     }
                     $codigo .= $componente;
 
-                    fwrite($arch, '?>'. $codigo);
-                    fclose($arch);           
-                }
-                $fh = fopen(PATH_COMPONENT . $nombre . '.txt','r');
-                $codigo= '';
-                while ($line = fgets($fh)) {
-                    $codigo.= $line;
-                }
-                fclose($fh);
-                $this->componentes[$nombre]= $codigo;
-            } catch(Exception $e){
-                unset($this->componentes[$nombre]);
-                echo 'Error en carga del componente: ' . $nombre;
-                return;
-            } 
-        }        
+                    
+                    fwrite($arch, $nombre . '=?>'. $codigo . PHP_EOL);
+                    fclose($arch);
+                    //Actualizo las lineas
+                    $this->componentes[$nombre] = '?>' . $codigo;
+                }            
+            }
+        } catch(Exception $e){
+            unset($this->componentes[$nombre]);
+            echo $e->getMessage();
+            echo 'Error en carga del componente: ' . $nombre;
+            return;
+        } 
         $rta= eval($this->componentes[$nombre]);
         //Si eval devuelve false quiere decir que fallo la ejecucion
         if($rta === FALSE){
@@ -300,6 +309,23 @@ class ApiUi {
         //Cierra la conexion
         curl_close($curl_conexion);        
         return $result;
-    }     
+    }
+    /**
+     * Pasa las lineas donde se definen los componentes a un arreglo asociativo con el nombre del component
+     * @param type $lineas
+     * @return array[asociativo]
+     */
+    private function parse_properties($lineas) {
+        $result= NULL;
+        foreach($lineas as $i=>$linea) {
+            if(empty($linea) || !isset($linea) || strpos($linea,"#") === 0){
+                continue;
+            }
+            $key = substr($linea,0,strpos($linea,'='));
+            $value = substr($linea,strpos($linea,'=') + 1, strlen($linea));
+            $result[$key] = $value;
+        }
+        return $result;
+   }
 }
 ?>

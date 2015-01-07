@@ -18,4 +18,120 @@
 ----------\n[2015-01-02 19:57:02.000000 127.0.0.1  - Error Fatal - Parse - Strict ] Call to undefined function theme()
 ----------\n[2015-01-06 19:55:40.000000 127.0.0.1  - Error Fatal - Parse - Strict ] syntax error, unexpected '<'
 ----------\n[2015-01-06 20:31:22.000000 127.0.0.1  - Error Fatal - Parse - Strict ] syntax error, unexpected '<'
+----------\n[2015-01-07 15:37:50.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:37:52.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:37:54.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:37:56.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:37:57.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:38:09.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:38:11.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:38:12.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:38:13.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:38:15.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:38:16.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:38:17.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:38:23.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:38:24.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:38:26.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:38:27.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:38:30.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:16.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:18.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:20.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:23.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:24.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:26.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:36.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:37.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:39.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:41.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:43.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:46.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:47.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:49.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:55.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:57.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:39:59.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:40:00.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:56:10.000000 127.0.0.1  - Unknown ] fopen(C:\wamp\www\uiservices-api-php\aplication//source/view/components/components.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: File exists
+----------\n[2015-01-07 15:56:10.000000 127.0.0.1  - Unknown ] fwrite() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:10.000000 127.0.0.1  - Unknown ] fclose() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:10.000000 127.0.0.1  - Unknown ] fopen(C:\wamp\www\uiservices-api-php\aplication//source/view/components/components.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: File exists
+----------\n[2015-01-07 15:56:10.000000 127.0.0.1  - Unknown ] fwrite() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:10.000000 127.0.0.1  - Unknown ] fclose() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:10.000000 127.0.0.1  - Unknown ] fopen(C:\wamp\www\uiservices-api-php\aplication//source/view/components/components.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: File exists
+----------\n[2015-01-07 15:56:10.000000 127.0.0.1  - Unknown ] fwrite() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:10.000000 127.0.0.1  - Unknown ] fclose() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fopen(C:\wamp\www\uiservices-api-php\aplication//source/view/components/components.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: File exists
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fwrite() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fclose() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fopen(C:\wamp\www\uiservices-api-php\aplication//source/view/components/components.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: File exists
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fwrite() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fclose() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fopen(C:\wamp\www\uiservices-api-php\aplication//source/view/components/components.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: File exists
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fwrite() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fclose() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fopen(C:\wamp\www\uiservices-api-php\aplication//source/view/components/components.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: File exists
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fwrite() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fclose() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fopen(C:\wamp\www\uiservices-api-php\aplication//source/view/components/components.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: File exists
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fwrite() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fclose() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fopen(C:\wamp\www\uiservices-api-php\aplication//source/view/components/components.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: File exists
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fwrite() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fclose() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fopen(C:\wamp\www\uiservices-api-php\aplication//source/view/components/components.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: File exists
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fwrite() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fclose() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fopen(C:\wamp\www\uiservices-api-php\aplication//source/view/components/components.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: File exists
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fwrite() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fclose() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fopen(C:\wamp\www\uiservices-api-php\aplication//source/view/components/components.txt) [<a href='function.fopen'>function.fopen</a>]: failed to open stream: File exists
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fwrite() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Unknown ] fclose() expects parameter 1 to be resource, boolean given
+----------\n[2015-01-07 15:56:11.000000 127.0.0.1  - Error Fatal - Parse - Strict ] syntax error, unexpected '='
+----------\n[2015-01-07 15:57:44.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 15:57:44.000000 127.0.0.1  - Error Fatal - Parse - Strict ] syntax error, unexpected '='
+----------\n[2015-01-07 16:00:42.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 16:00:42.000000 127.0.0.1  - Error Fatal - Parse - Strict ] syntax error, unexpected '='
+----------\n[2015-01-07 16:02:04.000000 127.0.0.1  - Error Fatal - Parse - Strict ] syntax error, unexpected '='
+----------\n[2015-01-07 16:04:06.000000 127.0.0.1  - Error Fatal - Parse - Strict ] syntax error, unexpected '='
+----------\n[2015-01-07 16:05:45.000000 127.0.0.1  - Unknown ] Undefined property: Index::$email
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.texto
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.fuente
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.seccion
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.seccion
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.inline
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.num
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.checked
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.name
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.num
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: datos.value
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.seccion
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.seccion
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.type
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.style
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.id
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.onclick
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.seccion
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.seccion
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.seccion
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.multiple
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.name
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.seccion
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: config.checked
+----------\n[2015-01-07 16:07:14.000000 127.0.0.1  - Unknown ] Undefined index: datos.value
+----------\n[2015-01-07 16:07:49.000000 127.0.0.1  - Unknown ] Undefined index: config.href
+----------\n[2015-01-07 16:07:49.000000 127.0.0.1  - Unknown ] Undefined index: config.label
+----------\n[2015-01-07 16:07:49.000000 127.0.0.1  - Unknown ] Undefined index: config.badge
+----------\n[2015-01-07 16:08:15.000000 127.0.0.1  - Unknown ] Undefined index: config.href
+----------\n[2015-01-07 16:08:15.000000 127.0.0.1  - Unknown ] Undefined index: config.label
+----------\n[2015-01-07 16:08:16.000000 127.0.0.1  - Unknown ] Undefined index: config.badge
+----------\n[2015-01-07 16:10:00.000000 127.0.0.1  - Unknown ] Undefined index: config.href
+----------\n[2015-01-07 16:10:00.000000 127.0.0.1  - Unknown ] Undefined index: config.label
+----------\n[2015-01-07 16:10:00.000000 127.0.0.1  - Unknown ] Undefined index: config.badge
+----------\n[2015-01-07 16:10:00.000000 127.0.0.1  - Unknown ] Undefined index: config.href
+----------\n[2015-01-07 16:10:00.000000 127.0.0.1  - Unknown ] Undefined index: config.label
+----------\n[2015-01-07 16:10:00.000000 127.0.0.1  - Unknown ] Undefined index: config.badge
 ----------\n

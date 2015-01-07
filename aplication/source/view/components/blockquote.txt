@@ -1,1 +1,0 @@
-?><blockquote> <p><?php echo $valores["config.texto"];?></p> <small><?php echo $valores["config.fuente"];?></small> </blockquote>

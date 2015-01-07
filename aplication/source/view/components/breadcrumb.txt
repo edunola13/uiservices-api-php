@@ -1,1 +1,0 @@
-?> <?php if(  $valores["config.seccion"] == NULL || $valores["config.seccion"] == "cabecera"){?> <ol class="breadcrumb"> <?php }?>            <?php if(  $valores["config.seccion"] == NULL || $valores["config.seccion"] == "pie"){?></ol><?php }?> 

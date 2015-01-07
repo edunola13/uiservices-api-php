@@ -15,5 +15,24 @@
         <?php Tags::button('asas', 'asas'); ?>
     <?php Tags::end_botonera(); ?>
     <?php Tags::breadcrumb();?>
+    <?php Tags::select("Asunto", "asunto", 'asas'); ?>
+                    <?php Tags::select_option("General", "General"); ?>
+                    <?php Tags::select_option("Enola PHP", "Enola PHP"); ?>
+                    <?php Tags::select_option("UI Services", "UI Services"); ?>
+                    <?php Tags::select_option("Games", "Games"); ?>
+                    <?php Tags::select_option("General", "General"); ?>
+                    <?php Tags::select_option("Enola PHP", "Enola PHP"); ?>
+                    <?php Tags::select_option("UI Services", "UI Services"); ?>
+                    <?php Tags::select_option("Games", "Games"); ?>
+                    <?php Tags::select_option("General", "General"); ?>
+                    <?php Tags::select_option("Enola PHP", "Enola PHP"); ?>
+                    <?php Tags::select_option("UI Services", "UI Services"); ?>
+                    <?php Tags::select_option("Games", "Games"); ?>
+                    <?php Tags::select_option("General", "General"); ?>
+                    <?php Tags::select_option("Enola PHP", "Enola PHP"); ?>
+                    <?php Tags::select_option("UI Services", "UI Services"); ?>
+                    <?php Tags::select_option("Games", "Games"); ?>
+                <?php Tags::end_select(); ?>
+
 </body>
 </html>
