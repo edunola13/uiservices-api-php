@@ -146,12 +146,12 @@ class ApiUi {
             echo $e->getMessage();
             echo 'Error en carga del componente: ' . $nombre;
             return;
-        } 
+        }
         $rta= eval($this->componentes[$nombre]);
         //Si eval devuelve false quiere decir que fallo la ejecucion
         if($rta === FALSE){
             echo 'Error ejecutando el componente: ' . $nombre;
-        }
+        } 
     }  
     private function armarIf($inicio, $componente){
         $res= '<?php ';

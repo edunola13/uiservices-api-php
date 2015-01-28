@@ -1,7 +1,7 @@
 {
     "base_url": "http://localhost/uiservices-api-php/",
     "environment": "development",
-    "calculate_performance": "FALSE",
+    "calculate_performance": "TRUE",
     "configuration": "configuration/",
     "charset": "UTF-8",
       
