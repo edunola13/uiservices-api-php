@@ -471,7 +471,7 @@ class Tags {
         $api->componente('login', $valores);
     }
     /* Navegacion y Menu  */    
-    public static function drop_down_menu($label, $style = 'default', $size = 'md',f $right = FALSE){
+    public static function drop_down_menu($label, $style = 'default', $size = 'md', $right = FALSE){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.label' => $label, 'config.style' => $style, 'config.size' => $size, 'config.right' => ($right ? 'pull-right': ''));
         $api->componente('drop_down_menu', $valores);
