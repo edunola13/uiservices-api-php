@@ -1,0 +1,1 @@
+ <div class="jumbotron"> <div class="container">  <h1><?php echo $valores["config.titulo"];?></h1> <p><?php echo $valores["config.contenido"];?></p> <p><a class="btn btn-<?php echo $valores["config.buttonStyle"];?> btn-<?php echo $valores["config.buttonSize"];?>" role="button" href="<?php echo $valores["config.href"];?>"><?php echo $valores["config.label"];?></a></p> </div></div>

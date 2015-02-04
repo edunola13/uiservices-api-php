@@ -7,6 +7,7 @@
 
 class ApiUi {
     private static $instancia;
+    public static $proyecto= 'bootstrap3';
     
     private function __construct() {
     }    
@@ -45,20 +46,20 @@ class ApiUi {
          include PATH_JAVASCRIPT . $nombre . '.php';
     }  
     private function conexionTheme($nombre){
-        $url = 'http://www.edunola.com.ar/serviciosui/theme?nombre=' . $nombre;
-        //$url= 'http://localhost/serviciosui/theme?nombre=' . $nombre;        
+        $url = 'http://www.edunola.com.ar/serviciosui/theme?nombre=' . $nombre . '&proyecto=' . self::$proyecto;
+        //$url= 'http://localhost/serviciosui/theme?nombre=' . $nombre . '&proyecto=' . self::$proyecto;        
         return $this->conexionGet($url);
     }     
     private function conexionJavaScript($nombre){
-        $url = 'http://www.edunola.com.ar/serviciosui/javascript?nombre=' . $nombre;
-        //$url= 'http://localhost/serviciosui/javascript?nombre=' . $nombre;        
+        $url = 'http://www.edunola.com.ar/serviciosui/javascript?nombre=' . $nombre . '&proyecto=' . self::$proyecto;
+        //$url= 'http://localhost/serviciosui/javascript?nombre=' . $nombre . '&proyecto=' . self::$proyecto;        
         return $this->conexionGet($url);
     }  
     public function componente($nombre, $valores = null){        
-        if(! file_exists(PATH_COMPONENT . $nombre . '.php')){
+        $nom_componente= self::$proyecto . '_' . $nombre;
+        if(! file_exists(PATH_COMPONENT . $nom_componente . '.php')){
             try{
-                $componente= $this->conexionComponente($nombre);
-                $arch = fopen(PATH_COMPONENT . $nombre . '.php', 'x');
+                $componente= $this->conexionComponente($nombre);                
                 $codigo= "";
                 $inicio= 0;            
                 $inicio= strpos($componente, "{{", $inicio);
@@ -117,7 +118,7 @@ class ApiUi {
                     $fin= strpos($componente, "%}", 0);
                 }
                 $codigo .= $componente;
-                
+                $arch = fopen(PATH_COMPONENT . $nom_componente . '.php', 'x');
                 fwrite($arch, $codigo);
                 fclose($arch);
             } catch(Exception $e){
@@ -126,7 +127,7 @@ class ApiUi {
             }            
         }
         //Lo incluyo y se ejecuta solo
-        include PATH_COMPONENT . $nombre . '.php';
+        include PATH_COMPONENT . $nom_componente . '.php';
     }  
     private function armarIf($inicio, $componente){
         $res= '<?php ';
@@ -254,8 +255,8 @@ class ApiUi {
 	return 'error';
     }
     private function conexionComponente($nombre){
-        //$url = 'http://www.edunola.com.ar/serviciosui/componenteDefinition?nombre=' . $nombre;
-        $url= 'http://localhost/uiservices/componenteDefinition?nombre=' . $nombre;        
+        //$url = 'http://www.edunola.com.ar/serviciosui/componenteDefinition?nombre=' . $nombre . '&proyecto=' . self::$proyecto;
+        $url= 'http://localhost/uiservices/componenteDefinition?nombre=' . $nombre . '&proyecto=' . self::$proyecto;        
         return $this->conexionGet($url);
     }    
     private function conexionGet($url){

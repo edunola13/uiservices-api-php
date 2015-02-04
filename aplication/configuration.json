@@ -23,6 +23,6 @@
     },
                 
     "libraries": {
-        "uiservices": {"class": "ServiciosUI-1.0-Eval/servicioui"}
+        "uiservices": {"class": "ServiciosUI-1.0/servicioui"}
     }
 }

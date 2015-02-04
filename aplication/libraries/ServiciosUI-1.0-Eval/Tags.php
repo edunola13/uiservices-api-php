@@ -8,7 +8,10 @@ class Tags {
     public static function javaScript($nombre = 'base'){
         $api= ApiUi::getInstance();    
         return $api->javaScript($nombre);
-    }    
+    }
+    public static function setProyecto($nombre){
+        ApiUi::$proyecto= $nombre;
+    }
     /* DEFINICION DE TODOS LOS COMPONENTES */
     public static function column_parsed($tableId, $title, $units){
         $api= ApiUi::getInstance();

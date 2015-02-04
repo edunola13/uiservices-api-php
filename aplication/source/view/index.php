@@ -6,6 +6,33 @@
     <?php Tags::javaScript();?>
 </head>
 <body>
+    <?php Tags::setProyecto('tablero'); ?>
+    <?php Tags::javaScript('tablero'); ?>
+    <?php Tags::column_parsed("datatable", "Tiempo de los Procesos", "horas"); ?>
+    <table id="datatable">
+	<thead>
+            <tr>
+		<th></th>
+		<th>AVG</th>
+            </tr>
+	</thead>
+	<tbody>
+            <tr>
+                <th>Proceso</th>
+		<td>10</td>
+		</tr>
+            <tr>
+                <th>Proceso Pepe</th>
+		<td>20</td>
+            </tr>
+            <tr>
+                <th>Proceso pluma</th>
+		<td>15</td>
+            </tr>
+	</tbody>
+    </table>
+    
+    <?php Tags::setProyecto('bootstrap3'); ?>
     <?php Tags::button_badge('U Boton', '34', 'ID', 'pepe()', 'button', 'primary', 'sm'); ?>
     <?php Tags::button('Otro Boton', 'id', 'pepe()', 'button'); ?>
     <?php Tags::jumbotron('Un titulo', 'asdd ada da d ad ad ad ad ', 'pepe.com', 'label', 'primary', 'lg'); ?>
