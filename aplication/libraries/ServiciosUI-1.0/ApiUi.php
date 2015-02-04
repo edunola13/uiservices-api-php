@@ -18,32 +18,34 @@ class ApiUi {
         return self::$instancia;
     }    
     public function theme($nombre){
-        if(! file_exists(PATH_THEME . $nombre . '.php')){
+        $nom_componente= self::$proyecto . '_' . $nombre;
+        if(! file_exists(PATH_THEME . $nom_componente . '.php')){
             try{
                 $theme= $this->conexionTheme($nombre); 
-                $arch = fopen(PATH_THEME . $nombre . '.php', 'x');
+                $arch = fopen(PATH_THEME . $nom_componente . '.php', 'x');
                 fwrite($arch, $theme);
                 fclose($arch); 
             } catch(Exception $e){
                 echo 'Error en carga del componente: ' . $nombre;
                 return;
             }
-         }
-         include PATH_THEME . $nombre . '.php';
+        }
+        include PATH_THEME . $nom_componente . '.php';
     }
     public function javaScript($nombre){
-         if(! file_exists(PATH_JAVASCRIPT . $nombre . '.php')){
+        $nom_componente= self::$proyecto . '_' . $nombre;
+        if(! file_exists(PATH_JAVASCRIPT . $nom_componente . '.php')){
             try{
                 $javascript= $this->conexionJavaScript($nombre);
-                $arch = fopen(PATH_JAVASCRIPT . $nombre . '.php', 'x');
+                $arch = fopen(PATH_JAVASCRIPT . $nom_componente . '.php', 'x');
                 fwrite($arch, $javascript);
                 fclose($arch);
             } catch(Exception $e){
                 echo 'Error en carga del componente: ' . $nombre;
                 return;
             } 
-         }
-         include PATH_JAVASCRIPT . $nombre . '.php';
+        }
+        include PATH_JAVASCRIPT . $nom_componente . '.php';
     }  
     private function conexionTheme($nombre){
         $url = 'http://www.edunola.com.ar/serviciosui/theme?nombre=' . $nombre . '&proyecto=' . self::$proyecto;
