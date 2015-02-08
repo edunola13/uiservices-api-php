@@ -672,4 +672,61 @@
 ----------\n[2015-02-04 19:26:36.000000 127.0.0.1  - Unknown ] Undefined index: select_message
 ----------\n[2015-02-04 19:26:38.000000 127.0.0.1  - Unknown ] Undefined index: config.size
 ----------\n[2015-02-04 19:26:38.000000 127.0.0.1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:03:51.000000 ::1  - Unknown ] Trying to get property of non-object
+----------\n[2015-02-07 21:03:51.000000 ::1  - Unknown ] Trying to get property of non-object
+----------\n[2015-02-07 21:03:51.000000 ::1  - Unknown ] Trying to get property of non-object
+----------\n[2015-02-07 21:03:51.000000 ::1  - Unknown ] Trying to get property of non-object
+----------\n[2015-02-07 21:03:51.000000 ::1  - Unknown ] Trying to get property of non-object
+----------\n[2015-02-07 21:03:51.000000 ::1  - Unknown ] Trying to get property of non-object
+----------\n[2015-02-07 21:03:51.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:03:51.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:03:51.000000 ::1  - Unknown ] Trying to get property of non-object
+----------\n[2015-02-07 21:03:51.000000 ::1  - Unknown ] Trying to get property of non-object
+----------\n[2015-02-07 21:03:51.000000 ::1  - Unknown ] Trying to get property of non-object
+----------\n[2015-02-07 21:03:51.000000 ::1  - Unknown ] Trying to get property of non-object
+----------\n[2015-02-07 21:03:51.000000 ::1  - Unknown ] Trying to get property of non-object
+----------\n[2015-02-07 21:03:51.000000 ::1  - Unknown ] Trying to get property of non-object
+----------\n[2015-02-07 21:04:28.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:04:28.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:04:34.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:04:34.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:05:02.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:05:02.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:05:43.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:05:43.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:05:58.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:05:58.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:06:19.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:06:19.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:10:23.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:10:23.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:16:42.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:16:42.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:17:23.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:17:23.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:18:10.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:18:10.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:18:18.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:18:18.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:18:54.000000 ::1  - Error Fatal - Parse - Strict ] Cannot access empty property
+----------\n[2015-02-07 21:27:22.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:27:22.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:31:33.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:31:33.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:31:59.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:31:59.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:32:35.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:32:35.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:32:36.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:32:36.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:32:56.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:32:56.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:32:57.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:32:57.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:33:26.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:33:26.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:33:58.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:33:58.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-02-07 21:34:36.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-02-07 21:34:36.000000 ::1  - Unknown ] Undefined index: select_message
 ----------\n

@@ -54,12 +54,24 @@
         <?php Tags::end_checkbox();?>
         <?php 
             $var= array();
-            $var[]= array('prueba', 'pepe');
-            $var[]= array('prueba', 'pepa');
-            $var[]= array('prueba', '2');
+            $var[]= array('prueba1', 'pepe');
+            $var[]= array('prueba2', 'pepa');
+            $var[]= array('prueba3', '2');
+            class Prueba{
+                public $nombre;
+                public $id;
+                public function __construct($nom, $i) {$this->nombre= $nom; $this->id= $i;}
+            }
+            
+            $varOb1= new Prueba('label1', 'pepe'); 
+            $varOb2= new Prueba('label2', 'pepa'); 
+            $varOb3= new Prueba('label3', '2');
+            $varsObject= array($varOb1, $varOb2, $varOb3);
         ?>
-        <?php Tags::checkbox_full('Full Check', 'full', 'full', array('pepa', 2), $var, FALSE, 'error')?>
-        <?php Tags::radio_full('Radio Full', 'fuli', 'pepan', 'pepa', $var, FALSE, '', 'sm');?>
+        <?php Tags::checkbox_full('Full Check', 'full', 'full', array('pepa', 2), $var, NULL, NULL, FALSE, 'error')?>
+        <?php Tags::checkbox_full('Full Check - Object', 'full2', 'full2', array('pepa', 2), $var, $varsObject, 'nombre', 'id')?>
+        <?php Tags::radio_full('Radio Full', 'fuli', 'pepan', 'pepa', $var, NULL, NULL, FALSE, '', 'sm');?>
+        <?php Tags::radio_full('Radio Full - Object', 'fuli2', 'pepan2', '2', $varsObject, 'nombre', 'id', FALSE, '', 'sm');?>
         <?php Tags::radio('Un Radio', 'rad', 'rade', 'rad1', 'si', '', 'lg');?>
             <?php Tags::radio_option('puti', 'rad1');?>
             <?php Tags::radio_option('puti', 'rad2');?>
@@ -70,7 +82,7 @@
             <?php Tags::select_option('prueba2', 3)?>
             <?php Tags::select_option('prueba3', 'pepa')?>
         <?php Tags::end_select();?>
-        <?php Tags::select_full(FALSE, 'SElect Full', 'full', 'fuli', array('pepa', 2), $var); ?>
+        <?php Tags::select_full(FALSE, 'SElect Full', 'full', 'fuli', array('pepa', 2), $var, NULL,NULL,'Elija', '0'); ?>
         <?php Tags::input_button('12', 'aaa', 'text', 'ahhhhh', 'Boton', '', 'a', FALSE, 'sd', 'primary', 'sm');?>
     <?php Tags::end_form();?>
     
@@ -83,7 +95,7 @@
             <?php Tags::select_option('prueba2', 3)?>
             <?php Tags::select_option('prueba3', 'pepa')?>
         <?php Tags::end_select();?>
-        <?php Tags::select_full(TRUE, 'SElect Full', 'full', 'fuli', array('pepa', 2), $var, '', TRUE); ?>
+        <?php Tags::select_full(TRUE, 'SElect Full', 'full', 'fuli', array('pepa', 2), $varsObject, 'nombre', 'id', NULL,NULL,'', TRUE); ?>
         <?php Tags::button('aaa');?>
     <?php Tags::end_form_inline(); ?>
     
