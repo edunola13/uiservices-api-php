@@ -52,12 +52,12 @@ class ApiUi {
     }  
     private function conexionTheme($nombre){
         $url = 'http://www.edunola.com.ar/serviciosui/theme?nombre=' . $nombre . '&proyecto=' . self::$proyecto;
-        //$url= 'http://localhost/serviciosui/theme?nombre=' . $nombre . '&proyecto=' . self::$proyecto;              
+        //$url= 'http://localhost/uiservices/theme?nombre=' . $nombre . '&proyecto=' . self::$proyecto;              
         return $this->conexionGet($url);
     }     
     private function conexionJavaScript($nombre){
         $url = 'http://www.edunola.com.ar/serviciosui/javascript?nombre=' . $nombre . '&proyecto=' . self::$proyecto;
-        //$url= 'http://localhost/serviciosui/javascript?nombre=' . $nombre . '&proyecto=' . self::$proyecto;        
+        //$url= 'http://localhost/uiservices/javascript?nombre=' . $nombre . '&proyecto=' . self::$proyecto;        
         return $this->conexionGet($url);
     }  
     public function componente($nombre, $valores = null){
@@ -74,7 +74,7 @@ class ApiUi {
                 }
             }
             if(! isset($this->componentes[$nom_componente])){
-                $componente= $this->conexionComponente($nombre);                    
+                $componente= $this->conexionComponente($nombre);                  
                 $codigo= "";
                 $inicio= 0;            
                 $inicio= strpos($componente, "{{", $inicio);
