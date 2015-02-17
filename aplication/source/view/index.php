@@ -34,7 +34,7 @@
     
     <?php Tags::setProyecto('bootstrap3'); ?>
     
-    <?php Tags::navigation_bar('$logo', 'asd', '', TRUE);?>
+    <?php Tags::navigation_bar('$logo', 'asd', TRUE, 'navbar-fixed-top', TRUE);?>
         <?php Tags::nav_bar_form('sas', 'dsc', 'sdffs', 'ad', 'asda');?>
     <?php Tags::end_navigation_bar(); ?>
        
