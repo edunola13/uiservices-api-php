@@ -567,11 +567,6 @@ class Tags {
         $valores= array('config.seccion' => 'pie');
         $api->componente('nav_item_drop_down', $valores);
     }    
-    public static function nav_item_list($type, $label = NULL, $href = NULL, $disabled = NULL){
-        $api= ApiUi::getInstance();
-        $valores= array('config.type' => $type, 'config.label' => $label, 'config.disabled' => ($disabled ? 'si' : 'no'), 'config.href' => $href);
-        $api->componente('nav_item_list', $valores);
-    }    
     public static function navigation_bar($logo, $href, $containerFluid = TRUE, $position='', $inverse=FALSE){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.logo' => $logo, 'config.href' => $href, 'config.position' => $position);
@@ -585,16 +580,6 @@ class Tags {
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('navigation_bar', $valores);
-    }    
-    public static function navigation_list(){
-        $api= ApiUi::getInstance();
-        $valores= array('config.seccion' => 'cabecera');
-        $api->componente('navigation_list', $valores);
-    }    
-    public static function end_navigation_list(){
-        $api= ApiUi::getInstance();
-        $valores= array('config.seccion' => 'pie');
-        $api->componente('navigation_list', $valores);
     }    
     public static function navigation_menu($type, $justified = NULL, $stacked = NULL){
         $api= ApiUi::getInstance();
