@@ -7,8 +7,9 @@
 
 class ApiUi {
     private static $instancia;
-    public static $proyecto= 'bootstrap3';
+    private $serverDefinition;
     
+    public static $proyecto= 'bootstrap3';    
     public $componentes;
     
     private function __construct() {
@@ -51,14 +52,26 @@ class ApiUi {
         include PATH_JAVASCRIPT . $nom_componente . '.php';
     }  
     private function conexionTheme($nombre){
-        $url = 'http://www.edunola.com.ar/serviciosui/theme?nombre=' . $nombre . '&proyecto=' . self::$proyecto;
-        //$url= 'http://localhost/uiservices/theme?nombre=' . $nombre . '&proyecto=' . self::$proyecto;              
-        return $this->conexionGet($url);
+        if(SERVER_DEFINITION){
+            $url = 'http://www.edunola.com.ar/serviciosui/theme?nombre=' . $nombre . '&proyecto=' . self::$proyecto;
+            //$url= 'http://localhost/uiservices/theme?nombre=' . $nombre . '&proyecto=' . self::$proyecto;              
+            return $this->conexionGet($url);
+        }else{
+            $this->load_server_definition();
+            $clave= self::$proyecto .'&theme&'. $nombre;
+            return preg_replace("/\r\n+|\r+|\n+|\t+/i", " ", $this->serverDefinition[$clave]);
+        }
     }     
     private function conexionJavaScript($nombre){
-        $url = 'http://www.edunola.com.ar/serviciosui/javascript?nombre=' . $nombre . '&proyecto=' . self::$proyecto;
-        //$url= 'http://localhost/uiservices/javascript?nombre=' . $nombre . '&proyecto=' . self::$proyecto;        
-        return $this->conexionGet($url);
+        if(SERVER_DEFINITION){
+            $url = 'http://www.edunola.com.ar/serviciosui/javascript?nombre=' . $nombre . '&proyecto=' . self::$proyecto;
+            //$url= 'http://localhost/uiservices/javascript?nombre=' . $nombre . '&proyecto=' . self::$proyecto;        
+            return $this->conexionGet($url);
+        }else{
+            $this->load_server_definition();
+            $clave= self::$proyecto .'&javascript&'. $nombre;
+            return preg_replace("/\r\n+|\r+|\n+|\t+/i", " ", $this->serverDefinition[$clave]);
+        }
     }  
     public function componente($nombre, $valores = null){
         $nom_componente= self::$proyecto . '_' . $nombre;
@@ -276,10 +289,22 @@ class ApiUi {
 	return 'error';
     }
     private function conexionComponente($nombre){
-        //$url = 'http://www.edunola.com.ar/serviciosui/componenteDefinition?nombre=' . $nombre . '&proyecto=' . self::$proyecto;
-        $url= 'http://localhost/uiservices/componenteDefinition?nombre=' . $nombre . '&proyecto=' . self::$proyecto;        
-        return $this->conexionGet($url);
-    }    
+        if(! SERVER_DEFINITION){
+            //$url = 'http://www.edunola.com.ar/serviciosui/componenteDefinition?nombre=' . $nombre . '&proyecto=' . self::$proyecto;
+            $url= 'http://localhost/uiservices/componenteDefinition?nombre=' . $nombre . '&proyecto=' . self::$proyecto;
+            return $this->conexionGet($url);
+        }else{
+            $this->load_server_definition();
+            $clave= self::$proyecto .'&component&'. $nombre;
+            return preg_replace("/\r\n+|\r+|\n+|\t+/i", " ", $this->serverDefinition[$clave]);
+        }
+    }
+    private function load_server_definition(){
+        if($this->serverDefinition == NULL){
+            $lineas= file(SERVER_DEFINITION_FILE);
+            $this->serverDefinition= $this->parse_properties($lineas);
+        }
+    }
     private function conexionGet($url){
         //Configuracion general de conexion
         $options = array(

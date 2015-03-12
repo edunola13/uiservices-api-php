@@ -455,7 +455,9 @@ class Tags {
     }    
     public static function endSelect(){
         $api= ApiUi::getInstance();
-        $valores= array('config.seccion' => 'pie', 'config.message' => $GLOBALS['select_message']);
+        $message= '';
+        if(isset($GLOBALS['select_message']))$message=$GLOBALS['select_message'];
+        $valores= array('config.seccion' => 'pie', 'config.message' => $message);
         //Elimino los datos
         unset($GLOBALS['select_value']);
         unset($GLOBALS['select_message']);
@@ -464,7 +466,7 @@ class Tags {
     public static function selectSimple($id, $name, $value, $onchange = NULL, $multiple = FALSE, $typeError = NULL, $size = 'md'){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.id' => $id, 'config.name' => $name, 'config.onchange' => $onchange, 
-            'config.multiple' => ($multiple ? 'si':'no'), 'config.typeError' => $typeError);
+            'config.multiple' => ($multiple ? 'si':'no'), 'config.typeError' => $typeError, 'config.size' => $size);
         //Guardo los value para los option
         $GLOBALS['select_value']= $value;
         $api->componente('select_simple', $valores);
@@ -632,9 +634,9 @@ class Tags {
         $valores= array('config.seccion' => 'cabecera');
         $api->componente('carousel', $valores);
     }    
-    public static function endCarousel(){
+    public static function endCarousel($labelPrevious="", $labelNext=""){
         $api= ApiUi::getInstance();
-        $valores= array('config.seccion' => 'pie');
+        $valores= array('config.seccion' => 'pie', 'config.labelPrevious' => $labelPrevious, 'config.labelNext' => $labelNext);
         $api->componente('carousel', $valores);
     }
     public static function carouselItem($src, $alt, $state=''){
