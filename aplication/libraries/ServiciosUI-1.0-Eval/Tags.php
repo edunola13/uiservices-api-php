@@ -13,12 +13,12 @@ class Tags {
         ApiUi::$proyecto= $nombre;
     }
     /* DEFINICION DE TODOS LOS COMPONENTES */
-    public static function column_parsed($tableId, $title, $units){
+    public static function columnParsed($tableId, $title, $units){
         $api= ApiUi::getInstance();
         $valores= array('config.tableId' => $tableId, 'config.title' => $title, 'config.units' => $units);
         $api->componente('column-parsed', $valores);
     }
-    public static function date_countdown($id, $date, $width, $height){
+    public static function dateCountdown($id, $date, $width, $height){
         $api= ApiUi::getInstance();
         $valores= array('config.id' => $id, 'config.date' => $date, 'config.width' => $width, 'config.height' => $height);
         $api->componente('date_countdown', $valores);
@@ -29,7 +29,7 @@ class Tags {
         $valores= array('config.nombre' => $name, 'config.direccion' => $dir, 'config.localidad' => $locale, 'config.telefono' => $tel);
         $api->componente('address', $valores);
     }    
-    public static function alert_message($type, $message, $strong = NULL){
+    public static function alertMessage($type, $message, $strong = NULL){
         if($message != NULL){
             $api= ApiUi::getInstance();
             $valores= array('config.type' => $type, 'config.strong' => $strong, 'config.message' => $message);
@@ -41,7 +41,7 @@ class Tags {
         $valores= array('config.label' => $label, 'config.href' => $href, 'config.badge' => $badge);
         $api->componente('badge', $valores);
     }
-    public static function button_badge($label, $badge = NULL, $id = NULL, $onClick = NULL, $type = 'button', $style = 'primary', $size = 'md'){
+    public static function buttonBadge($label, $badge = NULL, $id = NULL, $onClick = NULL, $type = 'button', $style = 'primary', $size = 'md'){
         $api= ApiUi::getInstance();
         $valores= array('config.label' => $label, 'config.type' => $type, 'config.badge' => $badge, 'config.style' => $style, 'config.size' => $size, 'config.id' => $id, 'config.onclick' => $onClick);
         $api->componente('button_badge', $valores);
@@ -51,17 +51,17 @@ class Tags {
         $valores= array('config.texto' => $text, 'config.fuente' => $source);
         $api->componente('blockquote', $valores);
     }    
-    public static function fixed_footer(){
+    public static function fixedFooter(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera');
         $api->componente('fixed_footer', $valores);
     }    
-    public static function end_fixed_footer(){
+    public static function endFixedFooter(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('fixed_footer', $valores);
     }    
-    public static function form_search($name, $label, $button_id, $onClick, $placeholder, $value = NULL){
+    public static function formSearch($name, $label, $button_id, $onClick, $placeholder, $value = NULL){
         $api= ApiUi::getInstance();
         $valores= array('config.input.name' => $name, 'config.input.placeholder' => $placeholder, 'config.label' => $label,
             'config.id' => $button_id, 'config.onclick' => $onClick, 'datos.value_input' => $value);
@@ -89,28 +89,28 @@ class Tags {
         if($button)$valores['config.button']='si';
         $api->componente('link', $valores);
     } 
-    public static function paginador_simple($preState, $preHref, $preLabel, $nextState, $nextHref, $nextLabel){
+    public static function paginadorSimple($preState, $preHref, $preLabel, $nextState, $nextHref, $nextLabel){
         $api= ApiUi::getInstance();
         $valores= array('config.previous.state' => $preState, 'config.previous.href' => $preHref, 'config.previous.label' => $preLabel,
                         'config.next.state' => $nextState, 'config.next.href' => $nextHref, 'config.next.label' => $nextLabel);
         $api->componente('paginador_simple', $valores);
     }    
-    public static function progress_bar($percentage, $striped = FALSE){
+    public static function progressBar($percentage, $striped = FALSE){
         $api= ApiUi::getInstance();
         $valores= array('config.porcentaje' => $percentage, 'config.striped' => ($striped ? 'si' : 'no'));
         $api->componente('progress_bar', $valores);
     }    
-    public static function simple_footer(){
+    public static function simpleFooter(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera');
         $api->componente('simple_footer', $valores);
     }    
-    public static function end_simple_footer(){
+    public static function endSimpleFooter(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('simple_footer', $valores);
     }    
-    public static function simple_header($primary, $secondary = NULL){
+    public static function simpleHeader($primary, $secondary = NULL){
         $api= ApiUi::getInstance();
         $valores= array('config.primario' => $primary, 'config.secundario' => $secondary);
         $api->componente('simple_header', $valores);
@@ -140,17 +140,17 @@ class Tags {
             'config.enctype' => $enctype);
         $api->componente('formulario', $valores);
     }    
-    public static function end_form(){
+    public static function endForm(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('formulario', $valores);
     }
-    public static function form_inline($id, $method, $action, $enctype = NULL){
+    public static function formInline($id, $method, $action, $enctype = NULL){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.id' => $id, 'config.method' => $method, 'config.action' => $action, 'config.enctype' => $enctype);
         $api->componente('form_inline', $valores);
     }    
-    public static function end_form_inline(){
+    public static function endFormInline(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('form_inline', $valores);
@@ -160,7 +160,7 @@ class Tags {
         $valores= array('config.seccion' => 'cabecera');
         $api->componente('botonera', $valores);
     }    
-    public static function end_botonera(){
+    public static function endBotonera(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('botonera', $valores);
@@ -176,13 +176,13 @@ class Tags {
             'datos.value' => $value, 'config.message' => $message, 'config.typeError' => $typeError, 'config.size' => $size);
         $api->componente('input', $valores);
     }
-    public static function input_inline($label, $id, $name, $type, $placeholder = NULL, $value = NULL, $typeError= NULL, $size = 'md'){
+    public static function inputInline($label, $id, $name, $type, $placeholder = NULL, $value = NULL, $typeError= NULL, $size = 'md'){
         $api= ApiUi::getInstance();
         $valores= array('config.label' => $label, 'config.id' => $id, 'config.name' => $name, 'config.type' => $type, 
             'config.placeholder' => $placeholder, 'datos.value' => $value, 'config.typeError' => $typeError, 'config.size' => $size);
         $api->componente('input_inline', $valores);
     }
-    public static function input_button($inputId, $name, $inputType, $placeholder, $labelButton, $onclick = NULL, $value = NULL, $buttonAfter = TRUE, $buttonId = NULL, $buttonStyle = 'default', $size = 'md'){
+    public static function inputButton($inputId, $name, $inputType, $placeholder, $labelButton, $onclick = NULL, $value = NULL, $buttonAfter = TRUE, $buttonId = NULL, $buttonStyle = 'default', $size = 'md'){
         $api= ApiUi::getInstance();
         $valores= array('config.inputId' => $inputId, 'config.name' => $name, 'config.inputType' => $inputType, 'config.placeholder' => $placeholder, 'config.labelButton' => $labelButton, 
             'config.onclick' => $onclick, 'datos.value' => $value, 'config.size' => $size, 'config.buttonId' => $buttonId, 'config.buttonStyle' => $buttonStyle);
@@ -199,7 +199,7 @@ class Tags {
             'datos.value' => $value, 'config.message' => $message, 'config.typeError' => $typeError, 'config.size' => $size);
         $api->componente('textarea', $valores);
     }
-    public static function boolean_checkbox($label, $id, $name, $value, $typeError = NULL, $size = 'md'){
+    public static function booleanCheckbox($label, $id, $name, $value, $typeError = NULL, $size = 'md'){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.label' => $label, 'config.size' => $size, 'config.typeError' => $typeError);
         //Imprimo lo que seria el Head
@@ -211,7 +211,7 @@ class Tags {
         $valores= array('config.seccion' => 'pie');
         $api->componente('checkbox', $valores);
     }
-    public static function checkbox_full($label, $id, $name, $value, $options, $varLabel=NULL,$varValue=NULL,$inline = FALSE, $typeError = NULL, $size = 'md'){
+    public static function checkboxFull($label, $id, $name, $value, $options, $varLabel=NULL,$varValue=NULL,$inline = FALSE, $typeError = NULL, $size = 'md'){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.label' => $label, 'config.size' => $size, 'config.typeError' => $typeError);
         //Imprimo lo que seria el Head
@@ -270,7 +270,7 @@ class Tags {
         $GLOBALS['check_inline']= $inline;
         $api->componente('checkbox', $valores);
     }    
-    public static function end_checkbox(){
+    public static function endCheckbox(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         //Elimino los datos
@@ -281,7 +281,7 @@ class Tags {
         unset($GLOBALS['check_inline']);
         $api->componente('checkbox', $valores);
     }    
-    public static function checkbox_option($label, $value){
+    public static function checkboxOption($label, $value){
         $api= ApiUi::getInstance();
         $valores= array('config.label' => $label, 'datos.value' => $value, 'config.name' => $GLOBALS['check_name']);     
         $checked= FALSE;
@@ -314,7 +314,7 @@ class Tags {
         $GLOBALS['check_num']++;
         $api->componente('checkbox_option', $valores);
     }
-    public static function radio_full($label, $id, $name, $value, $options, $varLabel = NULL, $varValue=NULL, $inline = FALSE, $typeError = NULL, $size = 'md'){
+    public static function radioFull($label, $id, $name, $value, $options, $varLabel = NULL, $varValue=NULL, $inline = FALSE, $typeError = NULL, $size = 'md'){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.label' => $label, 'config.size' => $size, 'config.typeError' => $typeError);
         //Imprimo lo que seria el Head
@@ -362,7 +362,7 @@ class Tags {
         $GLOBALS['radio_inline']= $inline;
         $api->componente('radio', $valores);
     }    
-    public static function end_radio(){
+    public static function endRadio(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         //Elimino los datos
@@ -373,7 +373,7 @@ class Tags {
         unset($GLOBALS['radio_inline']);
         $api->componente('radio', $valores);
     }    
-    public static function radio_option($label, $value){
+    public static function radioOption($label, $value){
         $api= ApiUi::getInstance();
         $valores= array('config.label' => $label, 'datos.value' => $value, 'config.name' => $GLOBALS['radio_name']);
         if(isset($GLOBALS['radio_value'])){
@@ -394,7 +394,7 @@ class Tags {
         $GLOBALS['radio_num']++;
         $api->componente('radio_option', $valores);
     }
-    public static function select_full($simple, $label, $id, $name, $value, $options, $varLabel = NULL, $varValue = NULL,$defaultLabel=NULL,$defaultValue=NULL,$onchange = NULL, $multiple = FALSE, $message = NULL, $typeError = NULL, $size = 'md'){
+    public static function selectFull($simple, $label, $id, $name, $value, $options, $varLabel = NULL, $varValue = NULL,$defaultLabel=NULL,$defaultValue=NULL,$onchange = NULL, $multiple = FALSE, $message = NULL, $typeError = NULL, $size = 'md'){
         $form= 'select';
         if($simple){$form='select_simple';}
         $api= ApiUi::getInstance();
@@ -453,7 +453,7 @@ class Tags {
         $GLOBALS['select_message']= $message;
         $api->componente('select', $valores);
     }    
-    public static function end_select(){
+    public static function endSelect(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie', 'config.message' => $GLOBALS['select_message']);
         //Elimino los datos
@@ -461,7 +461,7 @@ class Tags {
         unset($GLOBALS['select_message']);
         $api->componente('select', $valores);
     }
-    public static function select_simple($id, $name, $value, $onchange = NULL, $multiple = FALSE, $typeError = NULL, $size = 'md'){
+    public static function selectSimple($id, $name, $value, $onchange = NULL, $multiple = FALSE, $typeError = NULL, $size = 'md'){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.id' => $id, 'config.name' => $name, 'config.onchange' => $onchange, 
             'config.multiple' => ($multiple ? 'si':'no'), 'config.typeError' => $typeError);
@@ -469,14 +469,14 @@ class Tags {
         $GLOBALS['select_value']= $value;
         $api->componente('select_simple', $valores);
     }    
-    public static function end_select_simple(){
+    public static function endSelectSimple(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         //Elimino los datos
         unset($GLOBALS['select_value']);
         $api->componente('select_simple', $valores);
     }
-    public static function select_option($label, $value){
+    public static function selectOption($label, $value){
         $api= ApiUi::getInstance();
         $valores= array('config.label' => $label, 'datos.value' => $value);
         $checked= FALSE;
@@ -511,63 +511,63 @@ class Tags {
         $api->componente('login', $valores);
     }
     /* Navegacion y Menu  */    
-    public static function drop_down_menu($label, $style = 'default', $size = 'md', $right = FALSE){
+    public static function dropDownMenu($label, $style = 'default', $size = 'md', $right = FALSE){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.label' => $label, 'config.style' => $style, 'config.size' => $size, 'config.right' => ($right ? 'pull-right': ''));
         $api->componente('drop_down_menu', $valores);
     }    
-    public static function end_drop_down_menu(){
+    public static function endDropDownMenu(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('drop_down_menu', $valores);
     }    
-    public static function menu_item($type, $label = NULL, $href = NULL, $disabled = NULL){
+    public static function menuItem($type, $label = NULL, $href = NULL, $disabled = NULL){
         $api= ApiUi::getInstance();
         $valores= array('config.type' => $type, 'config.label' => $label, 'config.disabled' => ($disabled ? 'si' : 'no'), 'config.href' => $href);
         $api->componente('menu_item', $valores);
     }    
-    public static function nav_bar_form($action, $method, $inputName, $inputPlaceholder, $labelButton, $inputValue = NULL){
+    public static function navBarForm($action, $method, $inputName, $inputPlaceholder, $labelButton, $inputValue = NULL){
         $api= ApiUi::getInstance();
         $valores= array('config.action' => $action, 'config.method' => $method, 'config.input_name' => $inputName,
                         'config.placeholder' => $inputPlaceholder, 'config.label' => $labelButton, 'config.value_input' => $inputValue);
         $api->componente('nav_bar_form', $valores);
     }    
-    public static function nav_bar_left(){
+    public static function navBarLeft(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera');
         $api->componente('nav_bar_left', $valores);
     }    
-    public static function end_nav_bar_left(){
+    public static function endNavBarLeft(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('nav_bar_left', $valores);
     }
-    public static function nav_bar_right(){
+    public static function navBarRight(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera');
         $api->componente('nav_bar_right', $valores);
     }    
-    public static function end_nav_bar_right(){
+    public static function endNavBarRight(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('nav_bar_right', $valores);
     }    
-    public static function nav_item($label, $href, $state = NULL){
+    public static function navItem($label, $href, $state = NULL){
         $api= ApiUi::getInstance();
         $valores= array('config.label' => $label, 'config.href' => $href, 'config.state' => $state);
         $api->componente('nav_item', $valores);
     }    
-    public static function nav_item_drop_down($label, $right = FALSE, $state = NULL){
+    public static function navItemDropDown($label, $right = FALSE, $state = NULL){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.label' => $label, 'config.right' => ($right ? 'pull-right': ''), 'config.state' => $state);
         $api->componente('nav_item_drop_down', $valores);
     }    
-    public static function end_nav_item_drop_down(){
+    public static function endNavItemDropDown(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('nav_item_drop_down', $valores);
-    }      
-    public static function navigation_bar($logo, $href, $containerFluid = TRUE, $position='', $inverse=FALSE){
+    }    
+    public static function navigationBar($logo, $href, $containerFluid = TRUE, $position='', $inverse=FALSE){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.logo' => $logo, 'config.href' => $href, 'config.position' => $position);
         $valores['config.containerFluid']= 'si';
@@ -576,17 +576,17 @@ class Tags {
         if($inverse)$valores['config.inverse']='navbar-inverse';
         $api->componente('navigation_bar', $valores);
     }    
-    public static function end_navigation_bar(){
+    public static function endNavigationBar(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('navigation_bar', $valores);
-    }      
-    public static function navigation_menu($type, $justified = NULL, $stacked = NULL){
+    }    
+    public static function navigationMenu($type, $justified = NULL, $stacked = NULL){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.type' => $type, 'config.justified' => ($justified ? 'si' : 'no'), 'config.stacked' => ($stacked ? 'si' : 'no'));
         $api->componente('navigation_menu', $valores);
     }    
-    public static function end_navigation_menu(){
+    public static function endNavigationMenu(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('navigation_menu', $valores);
@@ -597,12 +597,12 @@ class Tags {
         $valores= array('config.seccion' => 'cabecera');
         $api->componente('breadcrumb', $valores);
     }    
-    public static function end_breadcrumb(){
+    public static function endBreadcrumb(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('breadcrumb', $valores);
     }
-    public static function button_group($label, $vertical = FALSE, $size = 'md'){
+    public static function buttonGroup($label, $vertical = FALSE, $size = 'md'){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.label' => $label, 'config.size' => $size);
         if($vertical){
@@ -612,17 +612,17 @@ class Tags {
         }
         $api->componente('button_group', $valores);
     }    
-    public static function end_button_group(){
+    public static function endButtonGroup(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('button_group', $valores);
     }
-    public static function button_toolbar(){
+    public static function buttonToolbar(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera');
         $api->componente('button_toolbar', $valores);
     }    
-    public static function end_button_toolbar(){
+    public static function endButtonToolbar(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('button_toolbar', $valores);
@@ -632,17 +632,17 @@ class Tags {
         $valores= array('config.seccion' => 'cabecera');
         $api->componente('carousel', $valores);
     }    
-    public static function end_carousel(){
+    public static function endCarousel(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('carousel', $valores);
     }
-    public static function carousel_item($src, $alt, $state=''){
+    public static function carouselItem($src, $alt, $state=''){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.src'=>$src,'config.alt'=>$alt,'config.state'=>$state);
         $api->componente('carousel_item', $valores);
     }    
-    public static function end_carousel_item(){
+    public static function endCarouselItem(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('carousel_item', $valores);
@@ -657,18 +657,18 @@ class Tags {
         $valores= array('config.type' => 'lista', 'config.label' => $label, 'config.badge' => $badge, 'config.active' => ($active ? 'active': ''));
         $api->componente('li', $valores);
     }    
-    public static function li_a($label, $href, $active = NULL, $badge = NULL){
+    public static function liLink($label, $href, $active = NULL, $badge = NULL){
         $api= ApiUi::getInstance();
         $valores= array('config.type' => 'lista_a', 'config.label' => $label, 'config.href' => $href, 'config.badge' => $badge, 'config.active' => ($active ? 'active': ''));
         $api->componente('li', $valores);
     }    
-    public static function media_object($href, $alt, $src, $title, $content){
+    public static function mediaObject($href, $alt, $src, $title, $content){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.href' => $href, 'config.alt' => $alt,
                         'congif.src' => $src, 'config.titulo' => $title, 'config.contenido' => $content);
         $api->componente('media_object', $valores);
     }    
-    public static function end_media_object(){
+    public static function endMediaObject(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('media_object', $valores);
@@ -678,12 +678,12 @@ class Tags {
         $valores= array('config.first' => 'no', 'config.last' => 'no', 'config.label' => $label, 'config.href' => $href, 'config.state' => $state);
         $api->componente('pagina', $valores);
     }    
-    public static function page_first($href, $state = NULL){
+    public static function pageFirst($href, $state = NULL){
         $api= ApiUi::getInstance();
         $valores= array('config.first' => 'si', 'config.href' => $href, 'config.state' => $state);
         $api->componente('pagina', $valores);
     }    
-    public static function page_last($href, $state = NULL){
+    public static function pageLast($href, $state = NULL){
         $api= ApiUi::getInstance();
         $valores= array('config.last' => 'si', 'config.first' => 'no', 'config.href' => $href, 'config.state' => $state);
         $api->componente('pagina', $valores);
@@ -693,7 +693,7 @@ class Tags {
         $valores= array('config.seccion' => 'cabecera');
         $api->componente('paginador', $valores);
     }    
-    public static function end_paginator(){
+    public static function endPaginator(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('paginador', $valores);
@@ -703,7 +703,7 @@ class Tags {
         $valores= array('config.seccion' => 'cabecera', 'config.titulo' => $title);
         $api->componente('panel', $valores);
     }
-    public static function end_panel($fot = NULL){
+    public static function endPanel($fot = NULL){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie', 'config.pie' => $fot);
         $api->componente('panel', $valores); 
@@ -713,7 +713,7 @@ class Tags {
         $valores= array('config.seccion' => 'cabecera', 'config.align' => $align, 'config.lead' => $lead);
         $api->componente('parrafo', $valores);
     }    
-    public static function end_paragraph(){
+    public static function endParagraph(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('parrafo', $valores);
@@ -738,17 +738,17 @@ class Tags {
         $valores= array('config.type' => 'lista', 'config.seccion' => 'cabecera');
         $api->componente('ul', $valores);
     }    
-    public static function end_ul(){
+    public static function endUl(){
         $api= ApiUi::getInstance();
         $valores= array('config.type' => 'lista', 'config.seccion' => 'pie');
         $api->componente('ul', $valores);
     }    
-    public static function ul_a(){
+    public static function ulLink(){
         $api= ApiUi::getInstance();
         $valores= array('config.type' => 'lista_a', 'config.seccion' => 'cabecera');
         $api->componente('ul', $valores);
     }    
-    public static function end_ul_a(){
+    public static function endUlLink(){
         $api= ApiUi::getInstance();
         $valores= array('config.type' => 'lista_a', 'config.seccion' => 'pie');
         $api->componente('ul', $valores);
@@ -759,47 +759,47 @@ class Tags {
         $valores= array('config.seccion' => 'cabecera');
         $api->componente('table', $valores);
     }    
-    public static function end_table(){
+    public static function endTable(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('table', $valores);
     }    
-    public static function table_field($value = NULL){
+    public static function tableField($value = NULL){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.value' => $value);
         $api->componente('table_field', $valores);
     }    
-    public static function end_table_field(){
+    public static function endTableField(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('table_field', $valores);
     }    
-    public static function table_head(){
+    public static function tableHead(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera');
         $api->componente('table_head', $valores);
     }    
-    public static function end_table_head(){
+    public static function endTableHead(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('table_head', $valores);
     }    
-    public static function table_head_field($value = NULL){
+    public static function tableHeadField($value = NULL){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.value' => $value);
         $api->componente('table_head_field', $valores);
     }    
-    public static function end_table_head_field(){
+    public static function endTableHeadField(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('table_head_field', $valores);
     }    
-    public static function table_row(){
+    public static function tableRow(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera');
         $api->componente('table_row', $valores);
     }    
-    public static function end_table_row(){
+    public static function endTableRow(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('table_row', $valores);

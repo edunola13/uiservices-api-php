@@ -842,4 +842,25 @@
 ----------\n[2015-02-17 14:35:28.000000 ::1  - Unknown ] Undefined index: config.labelNext
 ----------\n[2015-02-17 14:35:28.000000 ::1  - Unknown ] Undefined index: config.size
 ----------\n[2015-02-17 14:35:28.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-03-11 22:24:27.000000 ::1  - Unknown ] Undefined index: config.labelPrevious
+----------\n[2015-03-11 22:24:27.000000 ::1  - Unknown ] Undefined index: config.labelNext
+----------\n[2015-03-11 22:24:27.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-03-11 22:24:27.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-03-11 22:24:27.000000 ::1  - Error Fatal - Parse - Strict ] Call to undefined method Tags::end_formInline()
+----------\n[2015-03-11 22:24:53.000000 ::1  - Unknown ] Undefined index: config.labelPrevious
+----------\n[2015-03-11 22:24:53.000000 ::1  - Unknown ] Undefined index: config.labelNext
+----------\n[2015-03-11 22:24:53.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-03-11 22:24:53.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-03-11 22:25:02.000000 ::1  - Unknown ] Undefined index: config.labelPrevious
+----------\n[2015-03-11 22:25:02.000000 ::1  - Unknown ] Undefined index: config.labelNext
+----------\n[2015-03-11 22:25:02.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-03-11 22:25:02.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-03-11 22:25:32.000000 ::1  - Unknown ] Undefined index: config.labelPrevious
+----------\n[2015-03-11 22:25:32.000000 ::1  - Unknown ] Undefined index: config.labelNext
+----------\n[2015-03-11 22:25:32.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-03-11 22:25:32.000000 ::1  - Unknown ] Undefined index: select_message
+----------\n[2015-03-11 22:25:36.000000 ::1  - Unknown ] Undefined index: config.labelPrevious
+----------\n[2015-03-11 22:25:36.000000 ::1  - Unknown ] Undefined index: config.labelNext
+----------\n[2015-03-11 22:25:36.000000 ::1  - Unknown ] Undefined index: config.size
+----------\n[2015-03-11 22:25:36.000000 ::1  - Unknown ] Undefined index: select_message
 ----------\n
