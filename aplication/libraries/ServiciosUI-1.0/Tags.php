@@ -583,7 +583,7 @@ class Tags {
         $valores= array('config.seccion' => 'pie');
         $api->componente('navigation_bar', $valores);
     }    
-    public static function navigationMenu($type, $justified = NULL, $stacked = NULL){
+    public static function navigationMenu($type, $justified = FALSE, $stacked = FALSE){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.type' => $type, 'config.justified' => ($justified ? 'si' : 'no'), 'config.stacked' => ($stacked ? 'si' : 'no'));
         $api->componente('navigation_menu', $valores);
