@@ -53,7 +53,7 @@
     <?php Tags::jumbotron('Un titulo', 'asdd ada da d ad ad ad ad ', 'pepe.com', 'label', 'primary', 'lg'); ?>
     <?php Tags::thumbnail('asdadad', 'adasdad da da d ad', 'adad.com', 'Label', null, null, 'danger', 'sm'); ?>
     <?php Tags::form('12', 'POST', 'pepe.com', '', 'Label'); ?>
-        <?php Tags::input('Un  Label', '1', '2', 'text', 'Valor', '', '');?>
+        <?php Tags::input('Un  Label', '1', '2', 'text', 'Valor', 'as', '');?>
         <?php Tags::input('Un  Label', '1', '2', 'text', 'Valor', '', 'as', 'error', 'sm');?>
         <?php Tags::textarea('EL Label', '2', 'name', '3', 'eee', '', 'ss', 'success', 'lg'); ?>
         <?php Tags::booleanCheckbox('Label', 'bol', 'as', TRUE, 'error', 'md');?>

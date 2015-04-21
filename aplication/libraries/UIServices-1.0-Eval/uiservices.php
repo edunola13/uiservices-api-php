@@ -6,7 +6,7 @@
     //$pathComponents= realpath(dirname(__FILE__)) . '/../../source/view/components/';
     $pathComponents= PATHAPP . '/source/view/components/';
     //$pathServerDefinition= realpath(dirname(__FILE__)) . '/../../source/content/ServerDefinition-2015-03-12.txt';
-    $pathServerDefinition= PATHAPP . '/source/content/ServerDefinition-2015-03-12.txt';
+    $pathServerDefinition= PATHAPP . '/source/content/ServerDefinition-2015-04-21.txt';
     define('PATH_THEME', $pathThemes);
     define('PATH_JAVASCRIPT', $pathJavaScript);    
     define('PATH_COMPONENT', $pathComponents);
