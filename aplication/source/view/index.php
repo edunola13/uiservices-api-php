@@ -34,8 +34,8 @@
     
     <?php Tags::setProyecto('bootstrap3'); ?>
     
-    <?php Tags::navigationBar('$logo', 'asd', TRUE, 'navbar-fixed-top', TRUE);?>
-        <?php Tags::navBarForm('sas', 'dsc', 'sdffs', 'ad', 'asda');?>
+    <?php Tags::navigationBar('Logo', 'url', TRUE, 'navbar-fixed-top', TRUE);?>
+        <?php Tags::navBarForm('action', 'method', 'name', 'placeholder', 'label');?>
     <?php Tags::endNavigationBar(); ?>
        
     <?php Tags::carousel(); ?>
@@ -53,15 +53,14 @@
     <?php Tags::jumbotron('Un titulo', 'asdd ada da d ad ad ad ad ', 'pepe.com', 'label', 'primary', 'lg'); ?>
     <?php Tags::thumbnail('asdadad', 'adasdad da da d ad', 'adad.com', 'Label', null, null, 'danger', 'sm'); ?>
     <?php Tags::form('12', 'POST', 'pepe.com', '', 'Label'); ?>
-        <?php Tags::input('Un  Label', '1', '2', 'text', 'Valor', 'as', '');?>
-        <?php Tags::input('Un  Label', '1', '2', 'text', 'Valor', '', 'as', 'error', 'sm');?>
+        <?php Tags::input('Un Label', '1', '2', 'text', 'Valor', 'as', '');?>
         <?php Tags::textarea('EL Label', '2', 'name', '3', 'eee', '', 'ss', 'success', 'lg'); ?>
         <?php Tags::booleanCheckbox('Label', 'bol', 'as', TRUE, 'error', 'md');?>
         <?php Tags::checkbox('Check', 'as', 'asee', 'pepe', 'no', '', 'sm');?>
             <?php Tags::checkboxOption('Ahh', 'pepa');?>
             <?php Tags::checkboxOption('Ahsssh', 'pepe');?>
         <?php Tags::endCheckbox();?>
-        <?php Tags::checkbox('Check', 'as2', 'ase', array('pepe', 2), 'no', 'warning');?>
+        <?php Tags::checkbox('Check', 'as2', 'ase', array('pepe', 2), FALSE, 'warning');?>
             <?php Tags::checkboxOption('Ahh', 'pepa');?>
             <?php Tags::checkboxOption('Ahsssh', 'pepe');?>
             <?php Tags::checkboxOption('Ahh', 'pepa');?>
@@ -114,10 +113,10 @@
         <?php Tags::button('aaa');?>
     <?php Tags::endFormInline(); ?>
     
-    <?php Tags::dropDownMenu('Ehh Gil', 'primary');?>
-        <?php Tags::navItem('asas', 'asasas');?>
-        <?php Tags::navItem('asas', 'asasas');?>
-        <?php Tags::navItem('asas', 'asasas');?>
+    <?php Tags::dropDownMenu('Menu Desplegable', 'primary');?>
+        <?php Tags::navItem('Opcion 1', 'url1');?>
+        <?php Tags::navItem('Opcion 2', 'url2');?>
+        <?php Tags::navItem('Opcion 3', 'url3');?>
     <?php Tags::endDropDownMenu(); ?>
     
     <?php Tags::buttonGroup('Ehhh');?>
