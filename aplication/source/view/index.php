@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Enola PHP</title>
+    <title>UI Services - PHP</title>
     <?php Tags::theme();?>
     <?php Tags::javaScript();?>
 </head>
@@ -83,7 +83,7 @@
             $varsObject= array($varOb1, $varOb2, $varOb3);
         ?>
         <?php Tags::checkboxFull('Full Check', 'full', 'full', array('pepa', 2), $var, NULL, NULL, FALSE, 'error')?>
-        <?php Tags::checkboxFull('Full Check - Object', 'full2', 'full2', array('pepa', 2), $var, $varsObject, 'nombre', 'id')?>
+        <?php Tags::checkboxFull('Full Check - Object', 'full2', 'full2', array('pepe', 2), $varsObject, 'nombre', 'id')?>
         <?php Tags::radioFull('Radio Full', 'fuli', 'pepan', 'pepa', $var, NULL, NULL, FALSE, '', 'sm');?>
         <?php Tags::radioFull('Radio Full - Object', 'fuli2', 'pepan2', '2', $varsObject, 'nombre', 'id', FALSE, '', 'sm');?>
         <?php Tags::radio('Un Radio', 'rad', 'rade', 'rad1', 'si', '', 'lg');?>

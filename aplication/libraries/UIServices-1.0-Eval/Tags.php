@@ -155,12 +155,12 @@ class Tags {
         $valores= array('config.seccion' => 'pie');
         $api->componente('form_inline', $valores);
     }
-    public static function botonera(){
+    public static function boxButton(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera');
         $api->componente('botonera', $valores);
     }    
-    public static function endBotonera(){
+    public static function endBoxButton(){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie');
         $api->componente('botonera', $valores);
