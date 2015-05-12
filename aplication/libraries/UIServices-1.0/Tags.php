@@ -1,16 +1,16 @@
 <?php
 /** Description of Tags */
 class Tags {
-    public static function theme($nombre = 'base'){
+    public static function theme($name = 'base'){
         $api= ApiUi::getInstance();    
-        return $api->theme($nombre);               
+        return $api->theme($name);               
     }
-    public static function javaScript($nombre = 'base'){
+    public static function javaScript($name = 'base'){
         $api= ApiUi::getInstance();    
-        return $api->javaScript($nombre);
+        return $api->javaScript($name);
     }
-    public static function setProyecto($nombre){
-        ApiUi::$proyecto= $nombre;
+    public static function setProyecto($name){
+        ApiUi::$proyecto= $name;
     }
     /* DEFINICION DE TODOS LOS COMPONENTES */
     public static function columnParsed($tableId, $title, $units){
@@ -89,7 +89,7 @@ class Tags {
         if($button)$valores['config.button']='si';
         $api->componente('link', $valores);
     } 
-    public static function paginadorSimple($preState, $preHref, $preLabel, $nextState, $nextHref, $nextLabel){
+    public static function simplePaginator($preState, $preHref, $preLabel, $nextState, $nextHref, $nextLabel){
         $api= ApiUi::getInstance();
         $valores= array('config.previous.state' => $preState, 'config.previous.href' => $preHref, 'config.previous.label' => $preLabel,
                         'config.next.state' => $nextState, 'config.next.href' => $nextHref, 'config.next.label' => $nextLabel);
@@ -633,7 +633,7 @@ class Tags {
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera');
         $api->componente('carousel', $valores);
-    }   
+    }
     public static function endCarousel($labelPrevious="", $labelNext=""){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie', 'config.labelPrevious' => $labelPrevious, 'config.labelNext' => $labelNext);
