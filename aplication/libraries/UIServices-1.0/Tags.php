@@ -211,7 +211,7 @@ class Tags {
         $valores= array('config.seccion' => 'pie');
         $api->componente('checkbox', $valores);
     }
-    public static function checkboxFull($label, $id, $name, $value, $options, $varLabel=NULL,$varValue=NULL,$inline = FALSE, $typeError = NULL, $size = 'md'){
+    public static function checkboxFull($label, $id, $name, $value, $options, $varLabel=0,$varValue=1,$inline = FALSE, $typeError = NULL, $size = 'md'){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.label' => $label, 'config.size' => $size, 'config.typeError' => $typeError);
         //Imprimo lo que seria el Head
@@ -225,8 +225,13 @@ class Tags {
                 $optionLab= $option->$varLabel;
                 $optionVal= $option->$varValue;
             }else{
-                $optionLab= $option[0];
-                $optionVal= $option[1];                
+                if(is_array($option)){
+                    $optionLab= $option[$varLabel];
+                    $optionVal= $option[$varValue];
+                }else{
+                    $optionLab= $option;
+                    $optionVal= $option;
+                }                
             }
             $valores_option= array('config.label' => $optionLab, 'config.name' => $name, 'config.id' => $id . $can,'config.value' => $optionVal);
             $checked= FALSE;
@@ -314,7 +319,7 @@ class Tags {
         $GLOBALS['check_num']++;
         $api->componente('checkbox_option', $valores);
     }
-    public static function radioFull($label, $id, $name, $value, $options, $varLabel = NULL, $varValue=NULL, $inline = FALSE, $typeError = NULL, $size = 'md'){
+    public static function radioFull($label, $id, $name, $value, $options, $varLabel=0, $varValue=1, $inline = FALSE, $typeError = NULL, $size = 'md'){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera', 'config.label' => $label, 'config.size' => $size, 'config.typeError' => $typeError);
         //Imprimo lo que seria el Head
@@ -328,8 +333,13 @@ class Tags {
                 $optionLab= $option->$varLabel;
                 $optionVal= $option->$varValue;
             }else{
-                $optionLab= $option[0];
-                $optionVal= $option[1];                
+                if(is_array($option)){
+                    $optionLab= $option[$varLabel];
+                    $optionVal= $option[$varValue];
+                }else{
+                    $optionLab= $option;
+                    $optionVal= $option;
+                }                
             }
             $valores_option= array('config.label' => $optionLab, 'config.name' => $name, 'config.id' => $id . $can,'config.value' => $optionVal);
             if($optionVal == $value){
@@ -394,7 +404,7 @@ class Tags {
         $GLOBALS['radio_num']++;
         $api->componente('radio_option', $valores);
     }
-    public static function selectFull($simple, $label, $id, $name, $value, $options, $varLabel = NULL, $varValue = NULL,$defaultLabel=NULL,$defaultValue=NULL,$onchange = NULL, $multiple = FALSE, $message = NULL, $typeError = NULL, $size = 'md'){
+    public static function selectFull($simple, $label, $id, $name, $value, $options, $varLabel = 0, $varValue = 1,$defaultLabel=NULL,$defaultValue=NULL,$onchange = NULL, $multiple = FALSE, $message = NULL, $typeError = NULL, $size = 'md'){
         $form= 'select';
         if($simple){$form='select_simple';}
         $api= ApiUi::getInstance();
@@ -416,8 +426,13 @@ class Tags {
                 $optionLab= $option->$varLabel;
                 $optionVal= $option->$varValue;
             }else{
-                $optionLab= $option[0];
-                $optionVal= $option[1];                
+                if(is_array($option)){
+                    $optionLab= $option[$varLabel];
+                    $optionVal= $option[$varValue];
+                }else{
+                    $optionLab= $option;
+                    $optionVal= $option;
+                }                
             }            
             $valores_option= array('config.label' => $optionLab, 'config.value' => $optionVal);
             $checked= FALSE;
@@ -633,7 +648,7 @@ class Tags {
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'cabecera');
         $api->componente('carousel', $valores);
-    }
+    }   
     public static function endCarousel($labelPrevious="", $labelNext=""){
         $api= ApiUi::getInstance();
         $valores= array('config.seccion' => 'pie', 'config.labelPrevious' => $labelPrevious, 'config.labelNext' => $labelNext);

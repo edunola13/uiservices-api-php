@@ -82,9 +82,9 @@
             $varOb3= new Prueba('label3', '2');
             $varsObject= array($varOb1, $varOb2, $varOb3);
         ?>
-        <?php Tags::checkboxFull('Full Check', 'full', 'full', array('pepa', 2), $var, NULL, NULL, FALSE, 'error')?>
+        <?php Tags::checkboxFull('Full Check', 'full', 'full', array('pepa', 2), $var, 0, 1, FALSE, 'error')?>
         <?php Tags::checkboxFull('Full Check - Object', 'full2', 'full2', array('pepe', 2), $varsObject, 'nombre', 'id')?>
-        <?php Tags::radioFull('Radio Full', 'fuli', 'pepan', 'pepa', $var, NULL, NULL, FALSE, '', 'sm');?>
+        <?php Tags::radioFull('Radio Full', 'fuli', 'pepan', 'pepa', $var, 0, 1, FALSE, '', 'sm');?>
         <?php Tags::radioFull('Radio Full - Object', 'fuli2', 'pepan2', '2', $varsObject, 'nombre', 'id', FALSE, '', 'sm');?>
         <?php Tags::radio('Un Radio', 'rad', 'rade', 'rad1', 'si', '', 'lg');?>
             <?php Tags::radioOption('puti', 'rad1');?>
@@ -96,7 +96,7 @@
             <?php Tags::selectOption('prueba2', 3)?>
             <?php Tags::selectOption('prueba3', 'pepa')?>
         <?php Tags::endSelect();?>
-        <?php Tags::selectFull(FALSE, 'SElect Full', 'full', 'fuli', array('pepa', 2), $var, NULL,NULL,'Elija', '0'); ?>
+        <?php Tags::selectFull(FALSE, 'SElect Full', 'full', 'fuli', array('pepa', 2), $var, 0,1,'Elija', '0'); ?>
         <?php Tags::inputButton('12', 'aaa', 'text', 'ahhhhh', 'Boton', '', 'a', FALSE, 'sd', 'primary', 'sm');?>
     <?php Tags::endForm();?>
     

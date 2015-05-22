@@ -60,15 +60,15 @@
             $varsObject= array($varOb1, $varOb2, $varOb3);
         ?>
     
-        <?php Tags::checkboxFull('Full Check', 'idCheck3', 'nameCheck3', array('1', 2), $var, NULL, NULL, FALSE, 'error')?>
+        <?php Tags::checkboxFull('Full Check', 'idCheck3', 'nameCheck3', array('1', 2), $var, 0, 1, FALSE, 'error')?>
         <?php Tags::checkboxFull('Full Check - Object', 'idCheck4', 'nameCheck4', array(3, 2), $varsObject, 'nombre', 'id')?>
         <?php Tags::radioFull('Radio Full - Object', 'idRadio2', 'nameRadio2', '2', $varsObject, 'nombre', 'id', FALSE, '', 'sm');?> 
     
-        <?php Tags::selectFull(FALSE, 'Select Full', 'idSelect2', 'nameSelect2', array('1', 2), $var, NULL,NULL,'Elija', '0'); ?>
+        <?php Tags::selectFull(FALSE, 'Select Full', 'idSelect2', 'nameSelect2', array('1', 2), $var, 0,1,'Elija', '0'); ?>
     
-        <?php Tags::botonera(); ?>    
+        <?php Tags::boxButton() ?>    
             <?php Tags::button('Ingresar', '', 'submit');?>
-        <?php Tags::endBotonera(); ?>
+        <?php Tags::endBoxButton(); ?>
     <?php Tags::endForm();?>
 </body>
 </html>

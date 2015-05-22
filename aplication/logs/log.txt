@@ -1,4 +1,0 @@
-[2015-03-12 18:16:04.000000 127.0.0.1  - Unknown ] Undefined property: ApiUi::$serverDefinition - C:\wamp\www\uiservices-api-php\aplication\libraries\ServiciosUI-1.0\ApiUi.php - 283 
-----------\n[2015-03-12 18:16:04.000000 127.0.0.1  - Error Fatal - Parse - Strict ] Call to undefined method ApiUi::parse_properties() - C:\wamp\www\uiservices-api-php\aplication\libraries\ServiciosUI-1.0\ApiUi.php - 285 
-----------\n[2015-03-12 18:16:35.000000 127.0.0.1  - Error Fatal - Parse - Strict ] Call to undefined method ApiUi::parse_properties() - C:\wamp\www\uiservices-api-php\aplication\libraries\ServiciosUI-1.0\ApiUi.php - 288 
-----------\n
