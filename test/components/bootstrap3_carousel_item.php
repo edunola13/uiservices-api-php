@@ -1,0 +1,1 @@
+ <?php if(  $valores["config.seccion"] == NULL || $valores["config.seccion"] == "cabecera"){?> <div class="item <?php echo $valores["config.state"];?>"><img src="<?php echo $valores["config.src"];?>" alt="<?php echo $valores["config.alt"];?>"> <?php }?>                <?php if(  $valores["config.seccion"] == NULL || $valores["config.seccion"] == "pie"){?></div> <?php }?> 
