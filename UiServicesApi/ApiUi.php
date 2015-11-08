@@ -19,6 +19,7 @@ class ApiUi {
     public $pathTheme;
     public $pathJS;    
     public $pathComponent;
+    public $serverUrl;
     public $serverDefinition;
     public $serverDefinitionFile;
     /**
@@ -28,6 +29,7 @@ class ApiUi {
         $this->pathTheme= PATH_THEME;
         $this->pathJS= PATH_JAVASCRIPT;    
         $this->pathComponent= PATH_COMPONENT;
+        $this->serverUrl= SERVER_URL;
         $this->serverDefinition= SERVER_DEFINITION;
         $this->serverDefinitionFile= SERVER_DEFINITION_FILE;
         if(UI_API_MODE == 'filephp'){
@@ -58,7 +60,7 @@ class ApiUi {
                 $file = fopen($this->pathTheme . $nameComponent . '.php', 'x');
                 fwrite($file, $theme);
                 fclose($file); 
-            } catch(Exception $e){
+            } catch(\Exception $e){
                 echo 'Error loading component: ' . $name;
                 return;
             }
@@ -77,7 +79,7 @@ class ApiUi {
                 $file = fopen($this->pathJS . $nameComponent . '.php', 'x');
                 fwrite($file, $javascript);
                 fclose($file);
-            } catch(Exception $e){
+            } catch(\Exception $e){
                 echo 'Error loading component: ' . $name;
                 return;
             } 
@@ -91,8 +93,7 @@ class ApiUi {
      */
     private function connectionTheme($name){
         if(! $this->serverDefinition){
-            $url = 'http://www.edunola.com.ar/serviciosui/theme?nombre=' . $name . '&proyecto=' . $this->project;
-            //$url= 'http://localhost/uiservices/theme?nombre=' . $name . '&proyecto=' . $this->project;              
+            $url= $this->serverUrl . 'uiprint/theme/' . $this->project . '/' . $name;            
             return $this->connectionGet($url);
         }else{
             $this->loadServerDefinition();
@@ -107,8 +108,7 @@ class ApiUi {
      */
     private function connectionJavaScript($name){
         if(! $this->serverDefinition){
-            $url = 'http://www.edunola.com.ar/serviciosui/javascript?nombre=' . $name . '&proyecto=' . $this->project;
-            //$url= 'http://localhost/uiservices/javascript?nombre=' . $name . '&proyecto=' . $this->project;        
+            $url= $this->serverUrl . 'uiprint/javascript/' . $this->project . '/' . $name;        
             return $this->connectionGet($url);
         }else{
             $this->loadServerDefinition();
@@ -333,8 +333,7 @@ class ApiUi {
      */
     private function connectionComponent($name){
         if(! $this->serverDefinition){
-            //$url = 'http://www.edunola.com.ar/serviciosui/componenteDefinition?nombre=' . $nombre . '&proyecto=' . $this->project;
-            $url= 'http://localhost/uiservices/componenteDefinition?nombre=' . $name . '&proyecto=' . $this->project;
+            $url= $this->serverUrl . 'uidefinition/component/' . $this->project . '/' . $name;
             return $this->connectionGet($url);
         }else{
             $this->loadServerDefinition();
@@ -355,7 +354,7 @@ class ApiUi {
      * Realiza conexion con el servidor. Hace una peticion de tipo GET.
      * @param string $url
      * @return string
-     * @throws Exception
+     * @throws \Exception
      */
     private function connectionGet($url){
         //Configuracion general de conexion
@@ -378,7 +377,7 @@ class ApiUi {
         $result = curl_exec($curl_conexion);
         $header = curl_getinfo($curl_conexion);
         if($header['http_code'] != 200){
-            throw new Exception();
+            throw new \Exception('The ' . $url . ' threw error ' . $header['http_code']);
         }
         //Cierra la conexion
         curl_close($curl_conexion);        
@@ -426,7 +425,7 @@ class ApiUiEval{
                 //Actualizo las lineas
                 $this->api->components[$nameComponent] = '?>' . $code;         
             }
-        } catch(Exception $e){
+        } catch(\Exception $e){
             unset($this->api->components[$nameComponent]);
             echo $e->getMessage();
             echo 'Error loading component: ' . $name;
@@ -483,7 +482,7 @@ class ApiUiFilePhp{
                 $file = fopen($this->api->pathComponent . $nameComponent . '.php', 'x');
                 fwrite($file, $code);
                 fclose($file);
-            } catch(Exception $e){
+            } catch(\Exception $e){
                 echo 'Error loading component: ' . $name;
                 return;
             }            

@@ -10,6 +10,9 @@ $pathComponents= realpath(dirname(__FILE__)) . '/../test/components/';
 define('PATH_THEME', $pathThemes);
 define('PATH_JAVASCRIPT', $pathJavaScript);    
 define('PATH_COMPONENT', $pathComponents);
+//Direccion del servidor de UI que se va a consumir
+//define('SERVER_URL', 'http://www.edunola.com.ar/serviciosui/');
+define('SERVER_URL', 'http://localhost/uiservices/');
 /*
  * Si no se desea conectar con el servidor para la primer carga de componentes se puede usar una definicion del servidor.
  * Se debe indicar SERVER_DEFINITION = TRUE

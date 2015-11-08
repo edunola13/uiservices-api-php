@@ -18,6 +18,9 @@ class Tags {
     public function setProject($name){
         $this->api->project= $name;
     }
+    public function setServerUrl($url){
+        $this->api->serverUrl= $url;
+    }
     /* Temas y JavaScripts */
     public function theme($name = 'base'){
         return $this->api->theme($name);               
@@ -88,10 +91,10 @@ class Tags {
         if($button)$valores['config.button']='si';
         $this->api->component('link', $valores);
     } 
-    public function simplePaginator($preState, $preHref, $preLabel, $nextState, $nextHref, $nextLabel){
+    public function simplePager($preState, $preHref, $preLabel, $nextState, $nextHref, $nextLabel){
         $valores= array('config.previous.state' => $preState, 'config.previous.href' => $preHref, 'config.previous.label' => $preLabel,
                         'config.next.state' => $nextState, 'config.next.href' => $nextHref, 'config.next.label' => $nextLabel);
-        $this->api->component('paginador_simple', $valores);
+        $this->api->component('simple_pager', $valores);
     }    
     public function progressBar($percentage, $striped = FALSE){
         $valores= array('config.porcentaje' => $percentage, 'config.striped' => ($striped ? 'si' : 'no'));
@@ -128,11 +131,11 @@ class Tags {
     public function form($id, $method, $action, $enctype = NULL, $label = NULL){
         $valores= array('config.seccion' => 'cabecera', 'config.id' => $id, 'config.method' => $method, 'config.action' => $action, 'config.label' => $label,
             'config.enctype' => $enctype);
-        $this->api->component('formulario', $valores);
+        $this->api->component('form', $valores);
     }    
     public function endForm(){
         $valores= array('config.seccion' => 'pie');
-        $this->api->component('formulario', $valores);
+        $this->api->component('form', $valores);
     }
     public function formInline($id, $method, $action, $enctype = NULL){
         $valores= array('config.seccion' => 'cabecera', 'config.id' => $id, 'config.method' => $method, 'config.action' => $action, 'config.enctype' => $enctype);
@@ -144,11 +147,11 @@ class Tags {
     }
     public function boxButton(){
         $valores= array('config.seccion' => 'cabecera');
-        $this->api->component('botonera', $valores);
+        $this->api->component('keypad', $valores);
     }    
     public function endBoxButton(){
         $valores= array('config.seccion' => 'pie');
-        $this->api->component('botonera', $valores);
+        $this->api->component('keypad', $valores);
     }    
     public function button($label, $id = NULL, $type = 'button', $onClick = NULL, $style = 'default', $size = 'md'){
         $valores= array('config.type' => $type, 'config.label' => $label, 'config.style' => $style, 'config.size' => $size, 'config.id' => $id, 'config.onclick' => $onClick);
@@ -633,26 +636,26 @@ class Tags {
         $valores= array('config.seccion' => 'pie');
         $this->api->component('media_object', $valores);
     }    
-    public function page($label, $href, $state = NULL){
+    public function pagerItem($label, $href, $state = NULL){
         $valores= array('config.first' => 'no', 'config.last' => 'no', 'config.label' => $label, 'config.href' => $href, 'config.state' => $state);
-        $this->api->component('pagina', $valores);
+        $this->api->component('pager_item', $valores);
     }    
-    public function pageFirst($href, $state = NULL){
+    public function pagerItemFirst($href, $state = NULL){
         $valores= array('config.first' => 'si', 'config.href' => $href, 'config.state' => $state);
-        $this->api->component('pagina', $valores);
+        $this->api->component('pager_item', $valores);
     }    
-    public function pageLast($href, $state = NULL){
+    public function pagerItemLast($href, $state = NULL){
         $valores= array('config.last' => 'si', 'config.first' => 'no', 'config.href' => $href, 'config.state' => $state);
-        $this->api->component('pagina', $valores);
+        $this->api->component('pager_item', $valores);
     }    
-    public function paginator(){
+    public function pager(){
         $valores= array('config.seccion' => 'cabecera');
-        $this->api->component('paginador', $valores);
+        $this->api->component('pager', $valores);
     }    
-    public function endPaginator(){
+    public function endPager(){
         
         $valores= array('config.seccion' => 'pie');
-        $this->api->component('paginador', $valores);
+        $this->api->component('pager', $valores);
     }    
     public function panel($title = NULL){
         $valores= array('config.seccion' => 'cabecera', 'config.titulo' => $title);
@@ -664,11 +667,11 @@ class Tags {
     }
     public function paragraph($align = NULL, $lead = NULL){
         $valores= array('config.seccion' => 'cabecera', 'config.align' => $align, 'config.lead' => $lead);
-        $this->api->component('parrafo', $valores);
+        $this->api->component('paragraph', $valores);
     }    
     public function endParagraph(){
         $valores= array('config.seccion' => 'pie');
-        $this->api->component('parrafo', $valores);
+        $this->api->component('paragraph', $valores);
     }    
     public function small($value){
         $valores= array('config.value' => $value);
