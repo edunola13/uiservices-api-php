@@ -1,1 +1,0 @@
- <?php if(  $valores["config.seccion"] == NULL || $valores["config.seccion"] == "cabecera"){?> <div class="btn-toolbar" role="toolbar"> <?php }?>            <?php if(  $valores["config.seccion"] == NULL || $valores["config.seccion"] == "pie"){?></div><?php }?> 
